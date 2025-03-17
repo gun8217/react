@@ -28,3 +28,17 @@ export const StyledLabel = styled.label`
   margin-bottom: 5px;
   font-weight: bold;
 `;
+
+export const StyledButton = styled.button`
+  padding: 8px 12px;
+  margin-left: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
