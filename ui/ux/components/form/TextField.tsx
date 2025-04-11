@@ -1,9 +1,9 @@
-import React from 'react';
 import {
-  TextField,
-  StyledLabel,
   StyledButton,
+  StyledLabel,
+  TextField,
 } from '@/ui/styled/common_styled'; // styles.ts에서 가져오기
+import React from 'react';
 
 interface InputProps {
   label: string;

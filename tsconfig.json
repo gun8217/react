@@ -4,9 +4,11 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "./", // 루트 디렉토리를 기준으로 경로 별칭 설정
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["*"], // @ 경로는 루트 디렉토리에서 시작
+      "@/ui/*": ["ui/*"], // ui 폴더의 경로를 @/ui로 별칭 처리
+      "@/stories/*": ["stories/*"] // stories 폴더의 경로를 @/stories로 별칭 처리
     },
     "types": ["@storybook/react-webpack5"]
   }
