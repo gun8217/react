@@ -5,9 +5,22 @@ export interface TextFieldProps {
   bgColor?: string;
 }
 
-// TextField 스타일 정의
+// Flex
+export const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+// Input label
+export const StyledLabel = styled.label`
+  display: block;
+  font-weight: bold;
+`;
+
+// input
 export const TextField = styled.input<TextFieldProps>`
-  padding: 10px;
+  padding: 8px 10px;
   font-size: 16px;
   width: 100%;
   border-radius: 4px;
@@ -22,22 +35,15 @@ export const TextField = styled.input<TextFieldProps>`
   background-color: ${(props) => props.bgColor || 'white'};
 `;
 
-// Input label 스타일 정의
-export const StyledLabel = styled.label`
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-`;
-
+// button
 export const StyledButton = styled.button`
   padding: 8px 12px;
-  margin-left: 8px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
+  white-space: nowrap;
   &:hover {
     background-color: #0056b3;
   }

@@ -1,4 +1,5 @@
 import {
+  Flex,
   StyledButton,
   StyledLabel,
   TextField,
@@ -25,9 +26,9 @@ const Input: React.FC<InputProps> = ({
   onButtonClick,
 }) => {
   return (
-    <div>
+    <Flex>
       <StyledLabel>{label}</StyledLabel>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <Flex>
         <TextField
           value={value}
           onChange={onChange}
@@ -37,8 +38,8 @@ const Input: React.FC<InputProps> = ({
         {buttonLabel && onButtonClick && (
           <StyledButton onClick={onButtonClick}>{buttonLabel}</StyledButton>
         )}
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 };
 
