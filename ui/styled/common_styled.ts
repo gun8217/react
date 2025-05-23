@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-// 사용자 정의 prop을 받을 수 있도록 타입을 지정
-export interface TextFieldProps {
-  bgColor?: string;
-}
-
 // Flex
 export const Flex = styled.div`
   display: flex;
@@ -12,13 +7,31 @@ export const Flex = styled.div`
   gap: 8px;
 `;
 
-// Input label
+// button
+export const StyledButton = styled.button`
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover {
+    background-color: #0056b3;
+  }
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+`;
+
+// input
 export const StyledLabel = styled.label`
   display: block;
   font-weight: bold;
 `;
-
-// input
+export interface TextFieldProps {
+  bgColor?: string;
+}
 export const TextField = styled.input<TextFieldProps>`
   padding: 8px 10px;
   font-size: 16px;
@@ -35,16 +48,15 @@ export const TextField = styled.input<TextFieldProps>`
   background-color: ${(props) => props.bgColor || 'white'};
 `;
 
-// button
-export const StyledButton = styled.button`
-  padding: 8px 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  white-space: nowrap;
-  &:hover {
-    background-color: #0056b3;
-  }
+// radio
+export const StyledRadioLabel = styled.label<{ disabled?: boolean }>`
+  display: flex;
+  align-items: center;
+  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
+  margin: 4px 0;
+  user-select: none;
+  color: ${({ disabled }) => (disabled ? '#aaa' : 'inherit')};
+`;
+export const StyledInput = styled.input`
+  margin-right: 8px;
 `;

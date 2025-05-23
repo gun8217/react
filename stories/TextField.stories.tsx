@@ -1,6 +1,6 @@
+import Input from '@/ui/ux/components/common/TextField';
 import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
-import Input from '@/ui/ux/components/form/TextField'; // TextField 컴포넌트 import
 
 // Meta 설정
 const meta: Meta<typeof Input> = {
